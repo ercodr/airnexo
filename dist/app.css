@@ -889,8 +889,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-bounce {
-  -webkit-animation: bounce 2s infinite;
-          animation: bounce 2s infinite;
+  -webkit-animation: bounce 3s infinite;
+          animation: bounce 3s infinite;
 }
 
 @media (min-width: 768px) {
