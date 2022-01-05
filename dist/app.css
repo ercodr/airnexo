@@ -642,8 +642,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-bounce {
-  -webkit-animation: bounce 1s infinite;
-          animation: bounce 1s infinite;
+  -webkit-animation: bounce 3s infinite;
+          animation: bounce 3s infinite;
 }
 
 @-webkit-keyframes wiggle {
@@ -686,8 +686,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-ping {
-  -webkit-animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
-          animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .cursor-default {
