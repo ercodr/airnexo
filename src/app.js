@@ -6,6 +6,7 @@ let year = document.getElementById('year');
 let contactForm = document.getElementById('contact-form');
 let getInTouch = document.getElementById('getInTouch');
 let closeContactForm = document.getElementById('closeContactForm');
+let closeSentNotice = document.getElementById('closeSentNotice');
 
 // CALLING FUNCTIONS
 getTheme();
@@ -83,3 +84,55 @@ getInTouch.addEventListener('click', () => {
 closeContactForm.addEventListener('click', () => {
     contactForm.classList.toggle(slide);
 });
+
+// closeSentNotice.addEventListener('click', () => {
+//     contactForm.classList.toggle(slide);
+// });
+
+
+
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    send_mail();
+});
+
+function send_mail() {
+    var templateParams = {
+        from_name: document.getElementById('name').value,
+        to_name: "Trapcy",
+        message: document.getElementById('message').value
+    };
+
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+
+    // setTimeout(() => {
+    //     document.getElementById('contact-form').innerHTML = `
+    //     <h1 class="flex flex-col justify-center items-center gap-4 mx-auto text-white">
+    //         <i class="fa fa-check-circle" style="font-size: 120px;"></i>
+    //         <span class="font-bold">E-MAIL SENT!</span>
+    //     </h1>
+    //     `
+    // }, 500);
+    
+    emailjs.send('service_qst8txo', 'template_77h5nq8', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            setTimeout(() => {
+                document.getElementById('contact-form').innerHTML = `                
+                <h1 class="flex flex-col justify-center items-center gap-4 mx-auto text-white">
+                    <i class="fa fa-check-circle" style="font-size: 120px;"></i>
+                    <span class="font-bold">E-MAIL SENT!</span>
+                </h1>
+                `
+            }, 1);
+            // alert('MESSAGE SENT!')
+        }, function(error) {
+            console.log('FAILED...' + error);
+            alert(`FAILED: ${error}`);
+        });
+}

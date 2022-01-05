@@ -14,6 +14,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <style>*{font-family: poppins!important;}</style>
+
+    <!-- EMAIL JS FOR THE CONTACT FORM -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_FGScLKFvwuKOygF9T0lap");
+    })();
+    </script>
+
 </head>
 <body class="bg-[#FFB240] dark:bg-slate-900 overflow-x-hidden touch-auto select-none">
     
@@ -59,7 +68,8 @@
             <div class="container mx-auto text-center space-y-3 md:py-10">
                 <h1 class="text-lg lg:text-2xl font-bold">Hi, I’m Trapcy. Nice to have you here.</h1>
                 <p class="text-justify md:w-1/2 md:text-center mx-auto">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere deleniti sit officiis a sunt nesciunt, aut quaerat corrupti possimus nobis totam porro, assumenda recusandae facilis tempore harum, repudiandae iste dicta.
+                    I am an creative ui designer and a mid-level fontend web developer based in Volta region, Ghana.
+                     
                 </p>
             </div>
         </div>
@@ -108,7 +118,7 @@
                     <div onclick="hostels()" class="cursor-pointer border-4 w-full h-48 bg-white rounded-lg overflow-y-hidden shadow-lg transition-all hover:scale-[1.05]"> <img class="w-full h-full object-cover" src="./src/projects/hostels.com"> </div>                    
                 </div>
 
-                <div class="text-white bg-[#FFB240] dark:text-[#FFB240] dark:bg-slate-900 py-3 mt-10 mx-auto rounded text-sm font-bold transition-all cursor-none lg:cursor-pointer text-center hover:scale-[0.98] w-32"><a href="https://github.com/ercodr"> See more on <br> GitHub</a></div>
+                <div class="text-white bg-[#FFB240] hover:bg-transparent hover:text-[#FFB240] hover:outline dark:outline-none dark:text-white dark:bg-slate-900 py-3 mt-10 mx-auto rounded text-sm font-bold transition-all cursor-none lg:cursor-pointer text-center border-slate-800 dark:border-b-4 dark:hover:border-amber-400 dark:hover:border-b-4 w-32"><a href="https://github.com/ercodr"> See more on <br> GitHub</a></div>
 
             </div>
         </div>
@@ -116,8 +126,8 @@
         <div class="text-center flex flex-col items-center py-8 dark:text-white ">
             <div class="flex gap-2">
                 <!-- <a href=""><img class="w-[40px] h-[40px]" src="./src/icons/facebook.svg"></a> -->
-                <a href="https://wa.me/+233246101752"><img class="w-[40px] h-[40px]" src="./src/icons/whatsapp.svg"></a>
-                <a href="https://t.me/ercodr"><img class="w-[40px] h-[40px]" src="./src/icons/telegram.svg"></a>
+                <a class="hover:animate-bounce" href="https://wa.me/+233246101752"><img class="w-[40px] h-[40px]" src="./src/icons/whatsapp.svg"></a>
+                <a class="hover:animate-bounce" href="https://t.me/ercodr"><img class="w-[40px] h-[40px]" src="./src/icons/telegram.svg"></a>
             </div>
 
             <p class="my-4 font-bold dark:animate-pulse">Made with 💝 by Trapcy <br> 2022 - <span id="year"></span></p>
@@ -134,9 +144,9 @@
         </div>
         
         <label class="w-4/5 text-white font-bold mx-auto text-center text-md lg:text-2xl lg:px-52">Thanks for taking the time to reach out.<br> How can I help you today?</label>
-        <input class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="Full name" type="text" >
-        <input class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="E-mail" type="email">
-        <textarea class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="Message"></textarea>
+        <input id="name" class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="Full name" type="text" >
+        <input id="email" class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="E-mail" type="email">
+        <textarea id="message" class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="Message"></textarea>
         <button class="rounded p-4 w-4/5 lg:w-1/2 text-white bg-slate-900 dark:bg-amber-500 font-bold" type="submit">SEND MESSAGE</button>
     </form>
     <!-- CONTACT -->
