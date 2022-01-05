@@ -137,7 +137,7 @@
 
 
     <!-- CONTACT -->
-    <form id="contact-form" class="w-full h-full gap-4 z-[1] flex flex-col fixed transition-all translate-y-full top-0 left-0 bg-[#FFB240] dark:bg-slate-900 justify-center items-center mx-auto">
+    <!-- <form id="contact-form" class="w-full h-full gap-4 z-[1] flex flex-col fixed transition-all translate-y-full top-0 left-0 bg-[#FFB240] dark:bg-slate-900 justify-center items-center mx-auto">
         
         <div id="closeContactForm" class="">
             <i class="fa fa-arrow-circle-down absolute top-10 text-white text-2xl"></i>
@@ -148,6 +148,19 @@
         <input required id="email" class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="E-mail" type="email">
         <textarea required id="message" class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="Message"></textarea>
         <button class="rounded p-4 w-4/5 lg:w-1/2 text-white bg-slate-900 dark:bg-amber-500 font-bold" type="submit">SEND MESSAGE</button>
+    </form> -->
+    <form id="form" class="w-full h-full gap-4 z-[1] flex flex-col fixed transition-all translate-y-full top-0 left-0 bg-[#FFB240] dark:bg-slate-900 justify-center items-center mx-auto">
+        
+        <div id="closeContactForm" class="cursor-default lg:cursor-pointer">
+            <i class="fa fa-arrow-circle-down absolute top-10 text-white text-2xl"></i>
+        </div>
+        
+        <label class="w-4/5 text-white font-bold mx-auto text-center text-md lg:text-2xl lg:px-52">Thanks for taking the time to reach out.<br> How can I help you today?</label>
+        <input hidden id="to_name" name="to_name" type="text" value="Trapcy">
+        <input required id="from_name" name="from_name"  class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="Full name" type="text" >
+        <input required id="reply_to" name="reply_to" class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="E-mail" type="email">
+        <textarea required id="message" name="message" class="outline-none rounded p-4 w-4/5 lg:w-1/2" placeholder="Message"></textarea>
+        <button class="rounded p-4 w-4/5 lg:w-1/2 text-white bg-slate-900 dark:bg-amber-500 font-bold" type="submit" id="button">SEND MESSAGE</button>
     </form>
     <!-- CONTACT -->
 
