@@ -1,16 +1,24 @@
-var darkmode = document.getElementById('html');
-var themeToggler = document.getElementById('toggle-btn');
-var icon = document.getElementById('icon');
+// ASSIGNING THE DOM ELEMENTS TO VARIABLES
+let darkmode = document.getElementById('html');
+let themeToggler = document.getElementById('toggle-btn');
+let icon = document.getElementById('icon');
+let year = document.getElementById('year');
+let contactForm = document.getElementById('contact-form');
+let getInTouch = document.getElementById('getInTouch');
+let closeContactForm = document.getElementById('closeContactForm');
 
+// CALLING FUNCTIONS
 getTheme();
 iconTheme();
 
+// SETTING DARK MODE ON FIRST VISIT
 if(getTheme() != 'dark' && getTheme() != 'light'){
     localStorage.setItem('theme', 'dark');
     darkmode.classList.add(localStorage.getItem('theme'));
     iconTheme();
 }
 
+// LISTENING TO THE THEME TOGGLE BUTTON CLICK
 themeToggler.addEventListener('click', () => {
 
     if(getTheme() == 'light'){
@@ -27,6 +35,7 @@ themeToggler.addEventListener('click', () => {
     }
 });
 
+// GETTING THEME CLASS NAME FROM LOCALSTORAGE
 function getTheme(){
     return  String(localStorage.getItem('theme'));
 }
@@ -40,4 +49,37 @@ function iconTheme(){
     }    
 }
 
+// ADDING A THEME CLASS
 darkmode.classList.add(getTheme());
+
+// CUURENT YEAR
+let currentdate = new Date();
+year.innerText = currentdate.getFullYear();
+
+
+// PROJECTS LINK
+function doojie(){
+    window.open("http://dooje.epizy.com/");
+}
+function getTips(){
+    window.open("https://gettips.w3spaces.com/");
+}
+function getNews(){
+    window.open("https://ercodr.github.io/getnews/");
+}
+function hostels(){
+    window.open("https://ercodr.github.io/hostels.com/");
+}
+
+
+// CONTACT FORM
+
+let slide = 'translate-y-full';
+
+getInTouch.addEventListener('click', () => {
+    contactForm.classList.toggle(slide);
+});
+
+closeContactForm.addEventListener('click', () => {
+    contactForm.classList.toggle(slide);
+});
