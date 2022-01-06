@@ -642,8 +642,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-bounce {
-  -webkit-animation: bounce 10s infinite;
-          animation: bounce 10s infinite;
+  -webkit-animation: bounce 3s infinite;
+          animation: bounce 3s infinite;
 }
 
 @-webkit-keyframes wiggle {
@@ -968,7 +968,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(-25%);
+    transform: translateY(-5%);
     -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
             animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
@@ -981,8 +981,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .hover\:animate-bounce:hover {
-  -webkit-animation: bounce 1s infinite;
-          animation: bounce 1s infinite;
+  -webkit-animation: bounce 3s infinite;
+          animation: bounce 3s infinite;
 }
 
 .hover\:bg-transparent:hover {
